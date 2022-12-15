@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: linear-gradient(45deg, #6cb6f4 25%, #3691de 50%, #0e69b6 75%, #2d42ab 100%);
+}
+
+.main-container{
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  list-style: none;
+  padding: 1rem;
+}
+
+.navbar .item1 a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 1rem;
+  font-size: 12px;
+  transition: .8s;
+  position: relative;
+}
+
+.navbar .item1 a::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: #2781ce;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.navbar .item1 a:hover::before{
+  height: 0%;
+}
+
+.navbar .item2{
+  font-size: 20px;
+  margin-right: auto;
+  padding: 10px 20px;
+  background: #fff;
+  position: relative;
+  color:#061f35;
+}
+
+.navbar .item2::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10px;
+  left: 10px;
+  background: #074478;
+  z-index: -1;
+}
+
+.searchbox{
+  width: 200px;
+  height: 30px;
+  background: #3781c7;
+  display: flex;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#search-txt{
+  outline: none;
+  border: none;
+  background: transparent;
+  margin-left: 10px;
+}
+
+input[type="text"]::-webkit-input-placeholder{
+  color: white;
+}
+
+#search-btn{
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color:  #3781c7;
+  cursor: pointer;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr;
+  grid-gap: 410px;
+}
+
+.container .sidebar{
+  width: 250px;
+  background: #1b619c;
+  padding: 10px 10px;
+  list-style: none;
+  font-size: 20px;
+  border-radius: 0 50px 0  0;
+}
+
+.sidebar li{
+  width: 200px;
+  color: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sidebar li:last-child{
+ margin-bottom: 0px;
+}
+
+.sidebar li:first-child{
+ margin-top: 25px;
+}
+
+.sidebar li:hover{
+  background: #054072;
+}
+.create_story{
+  width: 500px;
+  display: flex;
+  font-size: 12px;
+  background: white;
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+#plus{
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  background: #94dde8;
+  margin: 5px 10px;
+}
+
+.post_story{
+  display: grid;
+  height: 110px;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 5px 20px;
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  max-width: 500px;
+}
+
+.post_story .upper-content{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid #a4c2db;
+  padding: 30px 0;
+}
+
+.upper-content > i{
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 2px solid #a4c2db;
+  border-radius: 50%;
+}
+
+.upper-content > p{
+  margin-left: 10px;
+  width: 400px;;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: #a4c2db;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+.post_story .side-content{
+  display: flex;
+  font-size: 15px;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  list-style: none;
+}
+
+.side-content .logo1 i{
+  color: red;
+}
+
+.side-content .logo2 i{
+  color: green;
+}
+
+.side-content .logo3 i{
+  color: orange;
+}
+
+.create_room{
+  padding: 20px;
+  height: 70px;
+  background: white;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+}
+
+.create-room > i{
+  color: #520b71;
+}
+
+.create-room{
+  width: 150px;
+  height: 50px;
+  border: #bbd9f1 1px solid;
+  line-height: 50px;
+  padding-left: 10px;
+  border-radius: 20px;
+  color: #278fe1;
+  cursor: pointer;
+}
+
+.find_friends{
+  place-items: center;
+  display: grid;
+  padding: 30px 10px;
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #595d5f;
+  max-width: 500px;
+}
+
+.find_friends .btn1{
+  background: #0d83f3;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.section1 .section1-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 250px;
+  border-bottom: 1px solid #fff;
+}
+
+.contact_section{
+  width: 300px;
+  color: #fff;
+  background: #085fbc;
+  padding:30px 30px;
+  border-radius: 50px 0 0 0;
+  position: relative;
+}
+
+.section1-1 .image-container{
+  margin: 10px;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+
+}
+
+.section1-1 img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.section1-1 .txt{
+  margin: 25px 10px;
+}
+
+.section2 .contact-btn{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.section2 .contact-btn span > i{
+  margin: 0 5px;
+}
+
+.section2 .friends-icon{
+  color: #fff;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  border-bottom: 1px solid;
+}
+
+.profile_container{
+  display: flex;
+  margin-top: 10px;
+}
+
+.profile_container:last-child{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.profile_container .profile > img{
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile_container .profile > #plus{
+  color: black;
+  margin: 0;
+  margin-right: 10px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.section3 > .profile_container{
+  margin-top: 10px;
+}
+
+.section3 .new_messages{
+  position: absolute;
+  display: grid;
+  place-items: center;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: black;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.section3 > .heading{
+  margin-top: 10px;
+}
